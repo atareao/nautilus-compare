@@ -1,0 +1,19 @@
+Source: nautilus-compare
+Section: utils
+Priority: extra
+Maintainer: Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: http://www.atareao.es
+
+Package: nautilus-compare
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends},
+    gir1.2-nautilus-3.0,
+    python3,
+    python3-nautilus,
+    python3-gi,
+    python3-plumbum
+Description: This is a extension for Nautilus to compare with Meld
+ With this is extension for Nautilus you can compare files and directories
+ with Meld application
