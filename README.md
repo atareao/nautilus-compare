@@ -46,6 +46,20 @@ For Nautilus you must install following dependencies,
 python3-nautilus
 gir1.2-nautilus-3.0
 ```
+
+For Nemo you must install following dependencies,
+
+```
+python3-nemo
+gir1.2-nemo-3.0
+```
+
+For Caja you must install following dependencies,
+
+```
+python3-caja
+gir1.2-caja-3.0
+```
 <!-- end prerequisites -->
 
 <!-- start installing -->
@@ -59,7 +73,7 @@ in a teminal (`Ctrl+Alt+T`), depending the file manager of your distro.
 ```
 sudo add-apt-repository ppa:atareao/nautilus-extensions
 sudo apt update
-sudo apt install nautilus-pdf-tools
+sudo apt install nautilus-compare
 nautilus -q
 ```
 
@@ -68,7 +82,7 @@ nautilus -q
 ```
 sudo add-apt-repository ppa:atareao/nemo-extensions
 sudo apt update
-sudo apt install nemo-pdf-tools
+sudo apt install nemo-compare
 nemo -q
 ```
 
@@ -77,7 +91,7 @@ nemo -q
 ```
 sudo add-apt-repository ppa:atareao/caja-extensions
 sudo apt update
-sudo apt install caja-pdf-tools
+sudo apt install caja-compare
 caja -q
 ```
 <!-- end installing -->
