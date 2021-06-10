@@ -41,10 +41,13 @@ from plumbum import local
 APP = 'nautilus-compare'
 LANGDIR = os.path.join('usr', 'share', 'locale-langpack')
 
-current_locale, encoding = locale.getdefaultlocale()
-language = gettext.translation(APP, LANGDIR, [current_locale])
-language.install()
-_ = language.gettext
+try:
+    current_locale, encoding = locale.getdefaultlocale()
+    language = gettext.translation(APP, LANGDIR, [current_locale])
+    language.install()
+    _ = language.gettext
+except:
+    _ = str
 
 COMPARE_NONE = 0
 COMPARE_DIRECTORIES = 1
@@ -95,8 +98,7 @@ class CompareMenuProvider(GObject.GObject, FileManager.MenuProvider):
         return menuitem,
 
     def on_menuitem_activated(self, widget, sel_items):
-        files.append(file_in.get_location().get_path())
-        files = [file_in.get_location.get_path() for file_in in sel_items]
+        files = [file_in.get_location().get_path() for file_in in sel_items]
         meld = local['meld']
         meld[files]()
         return
